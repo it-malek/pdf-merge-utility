@@ -44,12 +44,17 @@ python main.py
 **Programmatic:**
 
 ```python
+import datetime
+
 from src.config import ProcessorConfig
 from src.document_processor import DocumentProcessor
 
 config = ProcessorConfig(
     source_folder="path/to/source",
+    supplementary_folder=None,  # Or a folder containing PDFs with matching IDs
+    appendix_file=None,        # Or a PDF to append to each output
     output_folder="path/to/output",
+    start_date=datetime.date(2020, 1, 1),
 )
 processor = DocumentProcessor(config)
 stats = processor.process_documents()

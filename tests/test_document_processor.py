@@ -19,6 +19,8 @@ def _make_config(tmp_path: Path, start_date: datetime.date | None = None) -> Pro
     output.mkdir()
     return ProcessorConfig(
         source_folder=str(source),
+        supplementary_folder=None,
+        appendix_file=None,
         output_folder=str(output),
         start_date=start_date,
     )
