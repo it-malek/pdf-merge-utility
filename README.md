@@ -1,6 +1,6 @@
 # PDF Merge Utility
 
-A Python tool for automating PDF document organization and merging, built to streamline repetitive reporting workflows through intelligent filename-based matching.
+A Python tool for automating PDF document organization and merging, built to streamline repetitive reporting workflows by pairing documents through identifiers in their filenames.
 
 **Author:** Malek Elaghel · [malekelaghel@gmail.com](mailto:malekelaghel@gmail.com) · MIT License
 
@@ -8,19 +8,13 @@ A Python tool for automating PDF document organization and merging, built to str
 
 The utility pairs related PDFs by matching document IDs embedded in filenames (e.g., `G12345 Report.pdf` with `G12345 Data.pdf`), merges them with an optional appendix, and writes the results in batch. A Tkinter GUI guides users through folder selection; the underlying `DocumentProcessor` class is also usable programmatically.
 
-## GUI
-
-<!-- Provide a screenshot of the Tkinter selection flow and replace this comment with: -->
-<!-- ![GUI Screenshot](docs/images/gui_screenshot.png) -->
-> Screenshot coming soon.
-
 ## Core Features
 
-- **Intelligent file matching** — pairs documents using configurable ID patterns in filenames
-- **Date filtering** — limits processing to files modified on or after a specified date
-- **Appendix insertion** — optionally appends a standard last page to every merged output
-- **Batch processing** — handles entire folder trees with optional recursion
-- **Detailed logging** — reports processed, skipped, and errored file counts per run
+- **Filename-ID matching**: pairs related documents using ID patterns in filenames
+- **Date filtering**: limits processing to files modified on or after a specified date
+- **Appendix insertion**: optionally appends a standard last page to every merged output
+- **Batch processing**: handles entire folder trees with optional recursion
+- **Detailed logging**: reports processed, skipped, and errored file counts per run
 
 ## Getting Started
 
